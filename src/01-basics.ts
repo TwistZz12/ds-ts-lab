@@ -15,6 +15,12 @@ interface Colleague {
       extension: number;
     };
   }
+
+  interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
+  
   
 
 const friend1: Friend = {
@@ -60,10 +66,11 @@ const friend1: Friend = {
     },
   };
   
-  const colleagues = {
+  export const colleagues: ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
+  
   
   console.log(colleagues.current[0]);
   
